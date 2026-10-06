@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bare Roots Fall Flyer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --olive: #42462f;      /* Bare Roots olive band */
+    --olive-deep: #363a26;
+    --green: #6b7c3e;
+    --cream: #f2efe6;
+    --sage: #c4d7bb;       /* logo badge green */
+    --rule: #e9e4d4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #222; }
+  .flyer {
+    width: 720px; height: 467px;
+    display: grid; grid-template-columns: 329px 1fr;
+    background: var(--olive);
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: var(--cream);
+    overflow: hidden; position: relative;
+  }
+  .photos { display: grid; grid-template-rows: 148px 159px 148px; row-gap: 3px; padding: 3px 0 3px; background: var(--olive); }
+  .photos div { background-size: cover; background-position: center; }
+  .p1 { background-image: url(images/photo-1-patio-fall.jpg); }
+  .p2 { background-image: url(images/photo-2-garden-fall.jpg); }
+  .p3 { background-image: url(images/photo-3-pumpkins.jpg); }
+
+  .panel { position: relative; padding: 14px 34px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .watermark { position: absolute; right: -80px; bottom: -80px; width: 290px; height: 290px; opacity: .06; pointer-events: none; }
+  .services { font-size: 9.6px; letter-spacing: .09em; line-height: 1.75; font-weight: 500; text-transform: uppercase; }
+  .logo-rule { display: flex; align-items: center; gap: 10px; width: 100%; margin-top: 18px; }
+  .logo-rule::before, .logo-rule::after { content: ""; flex: 1; height: 1px; background: var(--rule); opacity: .8; }
+  .logo { display: block; width: 250px; height: auto; flex: none; border-radius: 4px; }
+  .bar { width: 100%; height: 3px; background: var(--cream); margin: 20px 0 14px; }
+  h1 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 32px; line-height: 1.15; }
+  .bar2 { width: 100%; height: 3px; background: var(--cream); margin: 15px 0 14px; }
+  p { font-size: 11px; line-height: 1.6; max-width: 336px; }
+  p + p { margin-top: 10px; }
+  .contact { margin-top: auto; padding-top: 6px; font-size: 10.4px; letter-spacing: .05em; }
+  .url { font-size: 15.5px; letter-spacing: .06em; font-weight: 500; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="flyer" id="flyer">
+  <div class="photos">
+    <div class="p1"></div>
+    <div class="p2"></div>
+    <div class="p3"></div>
+  </div>
+  <div class="panel">
+    <img class="watermark" src="images/emblem-watermark.png" alt="">
+
+    <div class="services">
+      Design • Construction • Maintenance • Irrigation<br>
+      Outdoor Living • Hardscaping • Lighting • Tree Care
+    </div>
+
+    <div class="logo-rule">
+      <img class="logo" src="images/bare-roots-logo.png" alt="Bare Roots Landscape Solutions">
+    </div>
+
+    <div class="bar"></div>
+    <h1>Bring Fall Color<br>Home With Seasonal<br>Enhancements</h1>
+    <div class="bar2"></div>
+
+    <p>Seasonal color and custom pumpkin displays add warmth, charm, and curb appeal to your home throughout the fall season.</p>
+    <p>From front entry arrangements to beautifully planted beds, our team creates polished autumn landscapes tailored to DFW&nbsp;homes.</p>
+
+    <div class="contact">214-949-4758 &nbsp;•&nbsp; INFO@BRLSTX.COM</div>
+    <div class="url">BRLSTX.COM</div>
+  </div>
+</div>
+</body>
+</html>
