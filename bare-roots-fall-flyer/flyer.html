@@ -20,31 +20,28 @@
   html, body { background: #222; }
   .flyer {
     width: 720px; height: 467px;
-    display: grid; grid-template-columns: 330px 1fr;
+    display: grid; grid-template-columns: 329px 1fr;
     background: var(--olive);
     font-family: 'Hanken Grotesk', sans-serif;
     color: var(--cream);
     overflow: hidden; position: relative;
   }
-  .photos { display: grid; grid-template-rows: 151px 159px 157px; gap: 0; background: var(--cream); }
-  .photos div { background-size: cover; background-position: center; border-bottom: 3px solid var(--cream); }
-  .photos div:last-child { border-bottom: 0; }
-  .p1 { background-image: url(images/patio.jpg); background-position: 50% 60% !important; }
-  .p2 { background-image: url(images/estate.jpg); background-position: 50% 45% !important; }
-  .p3 { background-image: url(images/lawn.jpg); background-position: 50% 70% !important; }
+  .photos { display: grid; grid-template-rows: 148px 159px 148px; row-gap: 3px; padding: 3px 0 3px; background: var(--olive); }
+  .photos div { background-size: cover; background-position: center; }
+  .p1 { background-image: url(images/photo-1-patio.jpg); }
+  .p2 { background-image: url(images/photo-2-garden.jpg); }
+  .p3 { background-image: url(images/photo-3-pumpkins.jpg); }
 
   .panel { position: relative; padding: 14px 34px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; }
-  .watermark { position: absolute; right: -70px; bottom: -70px; width: 300px; height: 300px; opacity: .07; pointer-events: none; }
+  .watermark { position: absolute; right: -80px; bottom: -80px; width: 290px; height: 290px; opacity: .06; pointer-events: none; }
   .services { font-size: 9.6px; letter-spacing: .09em; line-height: 1.75; font-weight: 500; text-transform: uppercase; }
-  .logo-rule { display: flex; align-items: center; gap: 8px; width: 100%; margin-top: 10px; }
+  .logo-rule { display: flex; align-items: center; gap: 10px; width: 100%; margin-top: 18px; }
   .logo-rule::before, .logo-rule::after { content: ""; flex: 1; height: 1px; background: var(--rule); opacity: .8; }
-  .emblem { width: 46px; height: 46px; flex: none; }
-  .name { font-family: 'Fraunces', serif; font-weight: 400; font-size: 37px; letter-spacing: .04em; line-height: 1; margin-top: 7px; }
-  .tag { font-family: 'Fraunces', serif; font-size: 11.5px; letter-spacing: .2em; margin-top: 5px; color: var(--sage); }
-  .bar { width: 100%; height: 3px; background: var(--cream); margin: 12px 0 10px; }
-  h1 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 31px; line-height: 1.13; }
-  .bar2 { width: 100%; height: 3px; background: var(--cream); margin: 11px 0 10px; }
-  p { font-size: 10.6px; line-height: 1.55; max-width: 340px; }
+  .logo { display: block; width: 250px; height: auto; flex: none; border-radius: 4px; }
+  .bar { width: 100%; height: 3px; background: var(--cream); margin: 20px 0 14px; }
+  h1 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 32px; line-height: 1.15; }
+  .bar2 { width: 100%; height: 3px; background: var(--cream); margin: 15px 0 14px; }
+  p { font-size: 11px; line-height: 1.6; max-width: 336px; }
   p + p { margin-top: 10px; }
   .contact { margin-top: auto; padding-top: 6px; font-size: 10.4px; letter-spacing: .05em; }
   .url { font-size: 15.5px; letter-spacing: .06em; font-weight: 500; margin-top: 2px; }
@@ -58,14 +55,7 @@
     <div class="p3"></div>
   </div>
   <div class="panel">
-    <svg class="watermark" viewBox="0 0 100 100" fill="none" stroke="#f2efe6" stroke-width="2.2" stroke-linecap="round">
-      <circle cx="50" cy="50" r="46"/>
-      <path d="M50 18 V56"/>
-      <path d="M50 34 C40 30 33 22 32 14 C42 15 49 22 50 34Z"/>
-      <path d="M50 30 C59 26 66 19 68 11 C58 12 51 19 50 30Z"/>
-      <path d="M22 56 H78"/>
-      <path d="M50 56 C49 66 44 72 36 78 M50 56 C51 67 56 73 64 79 M50 56 V84 M43 68 C39 70 33 70 28 68 M57 69 C61 71 67 71 72 69"/>
-    </svg>
+    <img class="watermark" src="images/emblem-watermark.png" alt="">
 
     <div class="services">
       Design • Construction • Maintenance • Irrigation<br>
@@ -73,25 +63,15 @@
     </div>
 
     <div class="logo-rule">
-    <svg class="emblem" viewBox="0 0 100 100" fill="none" stroke="#f2efe6" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="50" cy="50" r="45"/>
-      <path d="M50 22 V54"/>
-      <path d="M50 38 C41 35 35 28 34 20 C43 21 49 27 50 38Z"/>
-      <path d="M50 34 C58 31 64 24 66 16 C57 17 51 23 50 34Z"/>
-      <path d="M26 54 H74"/>
-      <path d="M50 54 C49 63 45 69 38 74 M50 54 C51 64 55 70 62 75 M50 54 V80 M44 65 C40 67 35 67 31 65 M56 66 C60 68 65 68 69 66"/>
-    </svg>
+      <img class="logo" src="images/bare-roots-logo.png" alt="Bare Roots Landscape Solutions">
     </div>
-
-    <div class="name">BARE ROOTS</div>
-    <div class="tag">LANDSCAPE SOLUTIONS</div>
 
     <div class="bar"></div>
     <h1>Bring Fall Color<br>Home With Seasonal<br>Enhancements</h1>
     <div class="bar2"></div>
 
     <p>Seasonal color and custom pumpkin displays add warmth, charm, and curb appeal to your home throughout the fall season.</p>
-    <p>From front entry arrangements to beautifully planted beds, our team creates polished autumn landscapes tailored to DFW homes.</p>
+    <p>From front entry arrangements to beautifully planted beds, our team creates polished autumn landscapes tailored to DFW&nbsp;homes.</p>
 
     <div class="contact">214-949-4758 &nbsp;•&nbsp; INFO@BRLSTX.COM</div>
     <div class="url">BRLSTX.COM</div>
