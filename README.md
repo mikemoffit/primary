@@ -21,10 +21,10 @@ Older **"VAG-COM 704" / HEX-USB** cables (hardware ID `VID_0403&PID_FA20`) are
 the same FTDI-plus-K-line design under a different USB ID, so they should work
 too, once the operating system exposes them as a serial port:
 
-- **Windows:** if Device Manager lists it under *Universal Serial Bus
-  controllers* rather than *Ports (COM & LPT)*, open its Properties, go to the
-  *Advanced* tab, tick **Load VCP**, then unplug and replug it. If there's no
-  Advanced tab, install FTDI's VCP driver and point it at the device.
+- **Windows:** don't force FTDI's driver onto it (Device Manager → Have Disk
+  → `ftdibus.inf`). On one user's PC that made Windows crash and reboot. Prefer
+  a standard KKL cable (`VID_0403&PID_6001`), which installs its driver
+  automatically.
 - **Linux:** `echo 0403 fa20 | sudo tee /sys/bus/usb-serial/drivers/ftdi_sio/new_id`
   (after `sudo modprobe ftdi_sio`), and it appears as `/dev/ttyUSB0`.
 
