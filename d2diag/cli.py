@@ -60,8 +60,11 @@ def cmd_ports(args):
         print("No serial ports found.  Is the cable plugged in and its driver installed?")
     for p in ports:
         print(f"{p.device:24} {p.description}  [{p.hwid}]")
-        if "0403:6001" in (p.hwid or ""):
+        hwid = (p.hwid or "").upper()
+        if "0403:6001" in hwid:
             print(f"{'':24} ^ FTDI FT232R -- likely your KKL cable")
+        elif "0403:FA20" in hwid:
+            print(f"{'':24} ^ FTDI with Ross-Tech HEX-USB ID (VAG-COM 704 style) -- a K-line cable")
 
 
 def cmd_info(args):

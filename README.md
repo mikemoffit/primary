@@ -17,6 +17,17 @@ Get a **"VAG-COM KKL 409.1" USB cable with a genuine FTDI FT232RL chip**
 adapter, so this software controls all the timing. That control is what makes
 reaching the non-engine modules possible.
 
+Older **"VAG-COM 704" / HEX-USB** cables (hardware ID `VID_0403&PID_FA20`) are
+the same FTDI-plus-K-line design under a different USB ID, so they should work
+too, once the operating system exposes them as a serial port:
+
+- **Windows:** if Device Manager lists it under *Universal Serial Bus
+  controllers* rather than *Ports (COM & LPT)*, open its Properties, go to the
+  *Advanced* tab, tick **Load VCP**, then unplug and replug it. If there's no
+  Advanced tab, install FTDI's VCP driver and point it at the device.
+- **Linux:** `echo 0403 fa20 | sudo tee /sys/bus/usb-serial/drivers/ftdi_sio/new_id`
+  (after `sudo modprobe ftdi_sio`), and it appears as `/dev/ttyUSB0`.
+
 An **ELM327** cable also works with `--backend elm327`, but only for the
 generic engine commands (`info`, `dtc`, `clear`, `live`). It can't run `scan`
 or talk to the other modules.
