@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "d2diag"
+version = "0.1.0"
+description = "Land Rover Discovery II V8 diagnostics over a USB K-line cable"
+requires-python = ">=3.9"
+dependencies = ["pyserial>=3.5"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+d2diag = "d2diag.cli:main"
+
+[tool.setuptools]
+packages = ["d2diag"]
